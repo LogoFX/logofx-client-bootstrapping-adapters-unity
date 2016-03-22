@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity", "LogoFX.Client.Bootstrapping.Adapters.Unity\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj", "{86BE00A6-BA8C-4231-B1EB-5C4016DB665D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{86BE00A6-BA8C-4231-B1EB-5C4016DB665D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86BE00A6-BA8C-4231-B1EB-5C4016DB665D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86BE00A6-BA8C-4231-B1EB-5C4016DB665D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

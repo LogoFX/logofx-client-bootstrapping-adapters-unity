@@ -107,6 +107,33 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
         }
 
         /// <summary>
+        /// Registers the collection of the dependencies.
+        /// </summary>
+        /// <typeparam name="TService">The type of the service.</typeparam>
+        /// <param name="dependencyTypes">The dependency types.</param>
+        public void RegisterCollection<TService>(IEnumerable<Type> dependencyTypes) where TService : class
+        {
+            foreach (var type in dependencyTypes)
+            {
+                _container.RegisterType(typeof (TService), type, type.Name);
+            }
+            _container.RegisterType<IEnumerable<TService>, TService[]>();
+        }
+
+        /// <summary>
+        /// Registers the collection of the dependencies.
+        /// </summary>
+        /// <param name="dependencyType">The dependency type.</param>
+        /// <param name="dependencyTypes">The dependency types.</param>
+        public void RegisterCollection(Type dependencyType, IEnumerable<Type> dependencyTypes)
+        {
+            foreach (var type in dependencyTypes)
+            {
+                _container.RegisterType(dependencyType, type, dependencyType.Name);
+            }            
+        }
+
+        /// <summary>
         /// Resolves an instance of service.
         /// </summary>
         /// <typeparam name="TService">The type of the service.</typeparam>
