@@ -9,7 +9,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
     /// <summary>
     /// Represents implementation of IoC container and bootstrapper adapter using Unity Container
     /// </summary>
-    public class UnityContainerAdapter : IIocContainer, IBootstrapperAdapter
+    public class UnityContainerAdapter : IIocContainer, IIocContainerAdapter<UnityContainer>, IBootstrapperAdapter
     {
         private readonly UnityContainer _container = new UnityContainer();
 
@@ -123,6 +123,15 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
         /// <summary>
         /// Registers the collection of the dependencies.
         /// </summary>
+        /// <typeparam name="TService">The type of the service.</typeparam><param name="dependencies">The dependencies.</param>
+        public void RegisterCollection<TService>(IEnumerable<TService> dependencies) where TService : class
+        {
+            _container.RegisterInstance(dependencies);
+        }
+
+        /// <summary>
+        /// Registers the collection of the dependencies.
+        /// </summary>
         /// <param name="dependencyType">The dependency type.</param>
         /// <param name="dependencyTypes">The dependency types.</param>
         public void RegisterCollection(Type dependencyType, IEnumerable<Type> dependencyTypes)
@@ -131,6 +140,18 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
             {
                 _container.RegisterType(dependencyType, type, dependencyType.Name);
             }            
+        }
+
+        /// <summary>
+        /// Registers the collection of the dependencies.
+        /// </summary>
+        /// <param name="dependencyType">The dependency type.</param><param name="dependencies">The dependencies.</param>
+        public void RegisterCollection(Type dependencyType, IEnumerable<object> dependencies)
+        {
+            foreach (var dependency in dependencies)
+            {
+                _container.RegisterType(dependencyType, dependencyType, dependency.GetType().FullName);
+            }                       
         }
 
         /// <summary>
