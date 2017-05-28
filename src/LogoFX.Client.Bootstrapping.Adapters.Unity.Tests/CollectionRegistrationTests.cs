@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
+using FluentAssertions;
+using Xunit;
 
 namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
-{
-    [TestFixture]
-    class CollectionRegistrationTests
+{    
+    public class CollectionRegistrationTests
     {
-        [Test]
+        [Fact]
         public void MultipleImplementationAreRegisteredByType_ResolvedCollectionContainsAllImplementations()
         {
             var adapter = new UnityContainerAdapter();
@@ -18,11 +18,11 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var firstItem = collection.First();
             var secondItem = collection.Last();
 
-            Assert.IsInstanceOf(typeof(TestDependencyA), firstItem);
-            Assert.IsInstanceOf(typeof(TestDependencyB), secondItem);
+            firstItem.Should().BeOfType<TestDependencyA>();
+            secondItem.Should().BeOfType<TestDependencyB>();            
         }
 
-        [Test]
+        [Fact]
         public void MultipleImplementationAreRegisteredByTypeAsParameter_ResolvedCollectionContainsAllImplementations()
         {
             var adapter = new UnityContainerAdapter();
@@ -33,11 +33,11 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var firstItem = collection.First();
             var secondItem = collection.Last();
 
-            Assert.IsInstanceOf(typeof(TestDependencyA), firstItem);
-            Assert.IsInstanceOf(typeof(TestDependencyB), secondItem);
+            firstItem.Should().BeOfType<TestDependencyA>();
+            secondItem.Should().BeOfType<TestDependencyB>();
         }
 
-        [Test]
+        [Fact]
         public void MultipleImplementationAreRegisteredByInstance_ResolvedCollectionContainsAllImplementations()
         {
             var adapter = new UnityContainerAdapter();
@@ -50,8 +50,8 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var firstItem = collection.First();
             var secondItem = collection.Last();
 
-            Assert.AreSame(instanceA, firstItem);
-            Assert.AreSame(instanceB, secondItem);
+            firstItem.Should().BeSameAs(instanceA);
+            secondItem.Should().BeSameAs(instanceB);            
         }
     }
 
