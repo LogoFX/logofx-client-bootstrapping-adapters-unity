@@ -4,14 +4,14 @@ using FluentAssertions;
 using Xunit;
 
 namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
-{    
+{
     public class CollectionRegistrationTests
     {
         [Fact]
         public void MultipleImplementationAreRegisteredByType_ResolvedCollectionContainsAllImplementations()
         {
             var adapter = new UnityContainerAdapter();
-            adapter.RegisterCollection<ITestDependency>(new[] { typeof(TestDependencyA), typeof(TestDependencyB) });
+            adapter.RegisterCollection<ITestDependency>(new[] {typeof(TestDependencyA), typeof(TestDependencyB)});
 
             var collection = adapter.Resolve<IEnumerable<ITestDependency>>().ToArray();
 
@@ -19,14 +19,14 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var secondItem = collection.Last();
 
             firstItem.Should().BeOfType<TestDependencyA>();
-            secondItem.Should().BeOfType<TestDependencyB>();            
+            secondItem.Should().BeOfType<TestDependencyB>();
         }
 
         [Fact]
         public void MultipleImplementationAreRegisteredByTypeAsParameter_ResolvedCollectionContainsAllImplementations()
         {
             var adapter = new UnityContainerAdapter();
-            adapter.RegisterCollection(typeof(ITestDependency), new[] { typeof(TestDependencyA), typeof(TestDependencyB) });
+            adapter.RegisterCollection(typeof(ITestDependency), new[] {typeof(TestDependencyA), typeof(TestDependencyB)});
 
             var collection = adapter.Resolve<IEnumerable<ITestDependency>>().ToArray();
 
@@ -43,7 +43,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var adapter = new UnityContainerAdapter();
             var instanceA = new TestDependencyA();
             var instanceB = new TestDependencyB();
-            adapter.RegisterCollection(new ITestDependency[] { instanceA, instanceB });
+            adapter.RegisterCollection(new ITestDependency[] {instanceA, instanceB});
 
             var collection = adapter.Resolve<IEnumerable<ITestDependency>>().ToArray();
 
@@ -51,22 +51,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
             var secondItem = collection.Last();
 
             firstItem.Should().BeSameAs(instanceA);
-            secondItem.Should().BeSameAs(instanceB);            
+            secondItem.Should().BeSameAs(instanceB);
         }
-    }
-
-    interface ITestDependency
-    {
-        
-    }
-
-    class TestDependencyA : ITestDependency
-    {
-        
-    }
-
-    class TestDependencyB : ITestDependency
-    {
-
     }
 }
