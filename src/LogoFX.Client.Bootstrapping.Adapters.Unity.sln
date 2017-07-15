@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity", "LogoFX.Client.Bootstrapping.Adapters.Unity\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj", "{C1A75F76-6BC5-4830-B4A0-6379B432ABA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity", "LogoFX.Client.Bootstrapping.Adapters.Unity\portable\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj", "{C1A75F76-6BC5-4830-B4A0-6379B432ABA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
