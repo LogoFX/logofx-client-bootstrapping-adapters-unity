@@ -96,9 +96,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Client.Bootstrapping.Adapters.Unity\portable\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj">
-      <Project>{c1a75f76-6bc5-4830-b4a0-6379b432aba8}</Project>
-      <Name>LogoFX.Client.Bootstrapping.Adapters.Unity</Name>
+    <ProjectReference Include="..\LogoFX.Client.Bootstrapping.Adapters.Unity\net45\LogoFX.Client.Bootstrapping.Adapters.Unity.NET45.csproj">
+      <Project>{acc99fd4-41ed-423c-9eab-7b98e9b54337}</Project>
+      <Name>LogoFX.Client.Bootstrapping.Adapters.Unity.NET45</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
