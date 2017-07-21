@@ -47,7 +47,7 @@
       <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Solid.Practices.IoC.1.2.0-rc3\lib\net45\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\..\packages\Solid.Practices.IoC.1.2.0-rc4\lib\net45\Solid.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
