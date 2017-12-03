@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using LogoFX.Client.Bootstrapping.Adapters.Contracts;
-using Microsoft.Practices.Unity;
 using Solid.Practices.IoC;
+using Unity;
+using Unity.Injection;
+using Unity.Lifetime;
 
 namespace LogoFX.Client.Bootstrapping.Adapters.Unity
 {
