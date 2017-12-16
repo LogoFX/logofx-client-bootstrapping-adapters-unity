@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.NET45", "LogoFX.Client.Bootstrapping.Adapters.Unity\net45\LogoFX.Client.Bootstrapping.Adapters.Unity.NET45.csproj", "{ACC99FD4-41ED-423C-9EAB-7B98E9B54337}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard20", "LogoFX.Client.Bootstrapping.Adapters.Unity\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard20.csproj", "{EDD28D99-5B80-4186-B853-2680BE7AB3EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20.csproj", "{7B840A99-78CF-4522-A597-DD4C3AC03CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard13", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard13\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard13.csproj", "{9286BFEB-03D3-46E0-A49F-D7B2ADAA2872}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard13", "LogoFX.Client.Bootstrapping.Adapters.Unity\netstandard1.3\LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard13.csproj", "{A7CC296A-D287-41DE-951B-EC8AA4495994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80287C2F-0D61-4D61-A9EA-7DB0849D1EF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACC99FD4-41ED-423C-9EAB-7B98E9B54337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACC99FD4-41ED-423C-9EAB-7B98E9B54337}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACC99FD4-41ED-423C-9EAB-7B98E9B54337}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACC99FD4-41ED-423C-9EAB-7B98E9B54337}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +25,14 @@ Global
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9286BFEB-03D3-46E0-A49F-D7B2ADAA2872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9286BFEB-03D3-46E0-A49F-D7B2ADAA2872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9286BFEB-03D3-46E0-A49F-D7B2ADAA2872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9286BFEB-03D3-46E0-A49F-D7B2ADAA2872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CC296A-D287-41DE-951B-EC8AA4495994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CC296A-D287-41DE-951B-EC8AA4495994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CC296A-D287-41DE-951B-EC8AA4495994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CC296A-D287-41DE-951B-EC8AA4495994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
