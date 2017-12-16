@@ -4,6 +4,7 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <AssemblyName>LogoFX.Client.Bootstrapping.Adapters.Unity</AssemblyName>
     <RootNamespace>LogoFX.Client.Bootstrapping.Adapters.Unity</RootNamespace>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
