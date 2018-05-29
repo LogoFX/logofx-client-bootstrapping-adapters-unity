@@ -86,7 +86,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
         /// <param name="dependencyCreator">Dependency creator delegate.</param>
         public void RegisterTransient(Type serviceType, Type implementationType, Func<object> dependencyCreator)
         {
-            _container.RegisterType(serviceType, implementationType,
+            _container.RegisterType(serviceType,
                 new InjectionFactory(context => dependencyCreator()));
         }
 
@@ -149,7 +149,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
         /// <param name="dependencyCreator">Dependency creator delegate.</param>
         public void RegisterSingleton(Type serviceType, Type implementationType, Func<object> dependencyCreator)
         {
-            _container.RegisterType(serviceType, implementationType, new ContainerControlledLifetimeManager(),
+            _container.RegisterType(serviceType, new ContainerControlledLifetimeManager(),
                 new InjectionFactory(context => dependencyCreator()));
         }
 
