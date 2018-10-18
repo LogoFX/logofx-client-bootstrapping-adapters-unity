@@ -11,7 +11,7 @@ using Unity.Lifetime;
 namespace LogoFX.Client.Bootstrapping.Adapters.Unity
 {
     /// <summary>
-    /// Represents implementation of IoC container and bootstrapper adapter using Unity Container.
+    /// Represents implementation of IoC container and bootstrapper adapter using <see cref="UnityContainer"/>
     /// </summary>
     public class UnityContainerAdapter : IIocContainer, IIocContainerAdapter<UnityContainer>, IBootstrapperAdapter
     {
@@ -28,157 +28,94 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
                 container.ResolveAll(type.GetTypeInfo().GenericTypeArguments.Single())));
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency declaration.</typeparam>
-        /// <typeparam name="TImplementation">Type of dependency implementation.</typeparam>
+        /// <inheritdoc />       
         public void RegisterTransient<TService, TImplementation>() where TImplementation : class, TService
         {
             _container.RegisterType<TService, TImplementation>();
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency.</typeparam>
+        /// <inheritdoc />       
         public void RegisterTransient<TService>() where TService : class
         {
             _container.RegisterType<TService>();            
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <param name="serviceType">Type of dependency declaration.</param>
-        /// <param name="implementationType">Type of dependency implementation.</param>
+        /// <inheritdoc />       
         public void RegisterTransient(Type serviceType, Type implementationType)
         {
             _container.RegisterType(serviceType, implementationType);
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency declaration.</typeparam>
-        /// <typeparam name="TImplementation">Type of dependency implementation.</typeparam>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />       
         public void RegisterTransient<TService, TImplementation>(Func<TImplementation> dependencyCreator) where TImplementation : class, TService
         {
             _container.RegisterType<TService>(new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency.</typeparam>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />       
         public void RegisterTransient<TService>(Func<TService> dependencyCreator) where TService : class
         {
             _container.RegisterType<TService>(new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers dependency in a transient lifetime style.
-        /// </summary>
-        /// <param name="serviceType">Type of dependency declaration.</param>
-        /// <param name="implementationType">Type of dependency implementation.</param>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />       
         public void RegisterTransient(Type serviceType, Type implementationType, Func<object> dependencyCreator)
         {
             _container.RegisterType(serviceType,
                 new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers dependency as a singleton.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency.</typeparam>
+        /// <inheritdoc />       
         public void RegisterSingleton<TService>() where TService : class
         {
             _container.RegisterType<TService>(new ContainerControlledLifetimeManager());
         }
 
-        /// <summary>
-        /// Registers dependency as a singleton.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency declaration.</typeparam>
-        /// <typeparam name="TImplementation">Type of dependency implementation.</typeparam>
+        /// <inheritdoc />       
         public void RegisterSingleton<TService, TImplementation>() where TImplementation : class, TService
         {
             _container.RegisterType<TService, TImplementation>(new ContainerControlledLifetimeManager());
         }
 
-        /// <summary>
-        /// Registers the singleton.
-        /// </summary>
-        /// <param name="serviceType">Type of the service.</param>
-        /// <param name="implementationType">Type of the implementation.</param>        
+        /// <inheritdoc />              
         public void RegisterSingleton(Type serviceType, Type implementationType)
         {
             _container.RegisterType(serviceType, implementationType, new ContainerControlledLifetimeManager());
         }
 
-        /// <summary>
-        /// Registers dependency as a singleton.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency.</typeparam>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />        
         public void RegisterSingleton<TService>(Func<TService> dependencyCreator) where TService : class
         {
             _container.RegisterType<TService>(new ContainerControlledLifetimeManager(),
                 new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers dependency as a singleton.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency declaration.</typeparam>
-        /// <typeparam name="TImplementation">Type of dependency implementation.</typeparam>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />       
         public void RegisterSingleton<TService, TImplementation>(Func<TImplementation> dependencyCreator) where TImplementation : class, TService
         {
             _container.RegisterType<TService>(new ContainerControlledLifetimeManager(), new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers dependency as a singleton.
-        /// </summary>
-        /// <param name="serviceType">Type of dependency declaration.</param>
-        /// <param name="implementationType">Type of dependency implementation.</param>
-        /// <param name="dependencyCreator">Dependency creator delegate.</param>
+        /// <inheritdoc />        
         public void RegisterSingleton(Type serviceType, Type implementationType, Func<object> dependencyCreator)
         {
             _container.RegisterType(serviceType, new ContainerControlledLifetimeManager(),
                 new InjectionFactory(context => dependencyCreator()));
         }
 
-        /// <summary>
-        /// Registers an instance of dependency.
-        /// </summary>
-        /// <typeparam name="TService">Type of dependency.</typeparam>
-        /// <param name="instance">Instance of dependency.</param>
+        /// <inheritdoc />       
         public void RegisterInstance<TService>(TService instance) where TService : class
         {
             _container.RegisterInstance(instance, new ContainerControlledLifetimeManager());
         }
 
-        /// <summary>
-        /// Registers the instance.
-        /// </summary>
-        /// <param name="dependencyType">Type of the dependency.</param>
-        /// <param name="instance">The instance.</param>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <inheritdoc />       
         public void RegisterInstance(Type dependencyType, object instance)
         {
             _container.RegisterInstance(dependencyType, instance, new ContainerControlledLifetimeManager());
         }        
 
-        /// <summary>
-        /// Registers the collection of the dependencies.
-        /// </summary>
-        /// <typeparam name="TService">The type of the service.</typeparam>
-        /// <param name="dependencyTypes">The dependency types.</param>
+        /// <inheritdoc />        
         public void RegisterCollection<TService>(IEnumerable<Type> dependencyTypes) where TService : class
         {
             foreach (var type in dependencyTypes)
@@ -187,21 +124,13 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
             }            
         }
 
-        /// <summary>
-        /// Registers the collection of the dependencies.
-        /// </summary>
-        /// <typeparam name="TService">The type of the service.</typeparam>
-        /// <param name="dependencies">The dependencies.</param>
+        /// <inheritdoc />       
         public void RegisterCollection<TService>(IEnumerable<TService> dependencies) where TService : class
         {
             _container.RegisterInstance(dependencies);
         }
 
-        /// <summary>
-        /// Registers the collection of the dependencies.
-        /// </summary>
-        /// <param name="dependencyType">The dependency type.</param>
-        /// <param name="dependencyTypes">The dependency types.</param>
+        /// <inheritdoc />       
         public void RegisterCollection(Type dependencyType, IEnumerable<Type> dependencyTypes)
         {
             foreach (var type in dependencyTypes)
@@ -210,11 +139,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
             }            
         }
 
-        /// <summary>
-        /// Registers the collection of the dependencies.
-        /// </summary>
-        /// <param name="dependencyType">The dependency type.</param>
-        /// <param name="dependencies">The dependencies.</param>
+        /// <inheritdoc />       
         public void RegisterCollection(Type dependencyType, IEnumerable<object> dependencies)
         {
             foreach (var dependency in dependencies)
@@ -223,24 +148,28 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
             }                       
         }
 
-        /// <summary>
-        /// Resolves an instance of service.
-        /// </summary>
-        /// <typeparam name="TService">The type of the service.</typeparam>
-        /// <returns/>
+        /// <inheritdoc />       
         public TService Resolve<TService>() where TService : class
         {
             return _container.Resolve<TService>();
         }
 
-        /// <summary>
-        /// Resolves an instance of service according to the service type.
-        /// </summary>
-        /// <param name="serviceType">The type of the service.</param>
-        /// <returns/>
+        /// <inheritdoc />        
         public object Resolve(Type serviceType)
         {
             return _container.Resolve(serviceType);
+        }
+
+        /// <inheritdoc />
+        public IEnumerable<TDependency> ResolveAll<TDependency>() where TDependency : class
+        {
+            return _container.ResolveAll<TDependency>();
+        }
+
+        /// <inheritdoc />
+        public IEnumerable<object> ResolveAll(Type dependencyType)
+        {
+            return _container.ResolveAll(dependencyType);
         }
 
         /// <summary>
@@ -263,7 +192,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
         {
             return _container.ResolveAll(serviceType);
         }
-
+        
         /// <summary>
         /// Resolves instance's dependencies and injects them into the instance.
         /// </summary>
@@ -273,9 +202,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
             _container.BuildUp(instance);
         }
 
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>        
+        /// <inheritdoc />              
         public void Dispose()
         {
             ((IDisposable) _container).Dispose();
