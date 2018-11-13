@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard20", "LogoFX.Client.Bootstrapping.Adapters.Unity\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.Unity.NETStandard20.csproj", "{EDD28D99-5B80-4186-B853-2680BE7AB3EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity", "LogoFX.Client.Bootstrapping.Adapters.Unity\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj", "{571B9D91-6851-460B-AED4-F05D92DCFB2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.NETStandard20.csproj", "{7B840A99-78CF-4522-A597-DD4C3AC03CCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{7B840A99-78CF-4522-A597-DD4C3AC03CCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDD28D99-5B80-4186-B853-2680BE7AB3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
