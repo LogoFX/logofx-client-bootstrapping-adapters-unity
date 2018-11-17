@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity", "LogoFX.Client.Bootstrapping.Adapters.Unity\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj", "{571B9D91-6851-460B-AED4-F05D92DCFB2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{7B840A99-78CF-4522-A597-DD4C3AC03CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests", "LogoFX.Client.Bootstrapping.Adapters.Unity.Tests\LogoFX.Client.Bootstrapping.Adapters.Unity.Tests.csproj", "{0BE26B0F-244F-450C-9A64-E3F3EFA89802}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{571B9D91-6851-460B-AED4-F05D92DCFB2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B840A99-78CF-4522-A597-DD4C3AC03CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE26B0F-244F-450C-9A64-E3F3EFA89802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE26B0F-244F-450C-9A64-E3F3EFA89802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE26B0F-244F-450C-9A64-E3F3EFA89802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE26B0F-244F-450C-9A64-E3F3EFA89802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
