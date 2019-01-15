@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts" Version="2.0.0-rc1" />
-    <PackageReference Include="Solid.Practices.IoC" Version="2.0.0-rc1" />
+    <PackageReference Include="Solid.Practices.IoC" Version="2.0.0" />
     <PackageReference Include="Unity" Version="5.8.13" />
   </ItemGroup>
 
