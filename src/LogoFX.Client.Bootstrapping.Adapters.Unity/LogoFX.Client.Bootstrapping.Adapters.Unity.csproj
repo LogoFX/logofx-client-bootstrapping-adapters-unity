@@ -14,7 +14,7 @@
   </PropertyGroup> 
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts" Version="2.0.0-rc3" />
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts" Version="2.0.0" />
     <PackageReference Include="Solid.Practices.IoC" Version="2.2.0" />
     <PackageReference Include="Unity" Version="5.10.3" />
   </ItemGroup>
