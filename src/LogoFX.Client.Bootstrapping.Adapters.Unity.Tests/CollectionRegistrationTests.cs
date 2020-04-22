@@ -11,7 +11,7 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity.Tests
         [Fact]
         public void MultipleImplementationAreRegisteredByType_ResolvedCollectionContainsAllImplementations()
         {
-            var adapter = new UnityContainerAdapter(new UnityContainer().AddExtension(new Diagnostic()));
+            var adapter = new UnityContainerAdapter(new UnityContainer());
             adapter.RegisterCollection<ITestDependency>(new[] {typeof(TestDependencyA), typeof(TestDependencyB)});
 
             var collection = adapter.Resolve<IEnumerable<ITestDependency>>().ToArray();
