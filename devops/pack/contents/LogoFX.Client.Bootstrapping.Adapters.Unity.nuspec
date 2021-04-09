@@ -18,5 +18,5 @@
       <dependency id="LogoFX.Client.Bootstrapping.Adapters.Contracts" version="2.2.0-rc2" />
       <dependency id="Unity" version="5.11.10" />
     </dependencies>
-  </metadata>  
+  </metadata>
 </package>

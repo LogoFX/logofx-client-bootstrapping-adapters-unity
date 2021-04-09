@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -7,7 +6,6 @@
     <AssemblyName>LogoFX.Client.Bootstrapping.Adapters.Unity.Tests</AssemblyName>
     <RootNamespace>LogoFX.Client.Bootstrapping.Adapters.Unity.Tests</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
@@ -17,9 +15,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\LogoFX.Client.Bootstrapping.Adapters.Unity\LogoFX.Client.Bootstrapping.Adapters.Unity.csproj" />
   </ItemGroup>
-
 </Project>
