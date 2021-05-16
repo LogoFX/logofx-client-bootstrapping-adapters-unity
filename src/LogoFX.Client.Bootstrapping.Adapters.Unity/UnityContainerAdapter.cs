@@ -15,17 +15,27 @@ namespace LogoFX.Client.Bootstrapping.Adapters.Unity
     /// </summary>
     public class UnityContainerAdapter : IIocContainer, IIocContainerAdapter<UnityContainer>, IBootstrapperAdapter
     {
-        private readonly UnityContainer _container = new UnityContainer();
+        private readonly IUnityContainer _container;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UnityContainerAdapter"/> class.
         /// </summary>
         public UnityContainerAdapter()
+        :this(new UnityContainer())
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnityContainerAdapter"/> class.
+        /// </summary>
+        /// <param name="unityContainer">The instance of <see cref="IUnityContainer"/></param>
+        public UnityContainerAdapter(IUnityContainer unityContainer)
+        {
+            _container = unityContainer;
             _container.RegisterInstance(_container);
-            _container.RegisterType(typeof(IEnumerable<>), 
-                new InjectionFactory((container, type, name) => 
-                container.ResolveAll(type.GetTypeInfo().GenericTypeArguments.Single())));
+            _container.RegisterType(typeof(IEnumerable<>),
+                new InjectionFactory((container, type, name) =>
+                    container.ResolveAll(type.GetTypeInfo().GenericTypeArguments.Single())));
         }
 
         /// <inheritdoc />       
