@@ -12,7 +12,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts" Version="2.2.0-rc3" />
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts" Version="2.2.0" />
     <PackageReference Include="Solid.Practices.IoC" Version="2.3.1" />
     <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
