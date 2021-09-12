@@ -1,5 +1,5 @@
 SET package_name=LogoFX.Client.Bootstrapping.Adapters.Unity
-SET package_version=2.2.1
+SET package_version=2.2.2
 cd ../build
 call build.bat
 cd ../pack
