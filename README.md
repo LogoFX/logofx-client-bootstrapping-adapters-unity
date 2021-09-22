@@ -8,3 +8,5 @@ An implementation of bootstrapper adapter for Unity
 <img src=https://img.shields.io/nuget/dt/LogoFX.Client.Bootstrapping.Adapters.Unity>
 
 [Get package](https://www.nuget.org/packages/LogoFX.Client.Bootstrapping.Adapters.Unity)
+
+This repository is archived. Its functionality has been moved to https://github.com/LogoFX/bootstrapping
